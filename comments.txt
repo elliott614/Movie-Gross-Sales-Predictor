@@ -1,0 +1,30 @@
+Data Files Required: ./movie_metadata.csv
+Programming Files Required: ./src/DecisionStump.java
+To run... just run (number of categories can be adjusted with constants for all features but genre)
+
+Via student id "emartinson" got <=10 Million gross = 0, >10 Million gross = 1
+
+Only counted a movie if from USA so budget and gross were in USD
+Implemented a mechanism to reduce the impact of outliers on categorization
+
+Genre selection strategy:
+Made a hash map using first genre as key and value as number of instances. Results:
+	Action: 756
+	Adventure: 297
+	Horror: 139
+	Romance: 2
+	Western: 2
+	Documentary: 33
+	Sci-Fi: 7
+	Drama: 523
+	Thriller: 1
+	Crime: 204
+	Biography: 138
+	Fantasy: 31
+	Animation: 37
+	Family: 3
+	Comedy: 882
+	Mystery: 17
+	Musical: 2
+
+Will combine Crime with Mystery, Fantasy with Sci-Fi, Horror with Thriller, Drama with Romance, Action with Western, Family with Animation/Musical to make 10 genres.
